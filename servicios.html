@@ -7,6 +7,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* ESTILOS ESPECÍFICOS PARA ESTA MEJORA (No rompen el resto) */
+        .services-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: #262626; /* Gris oscuro para las tarjetas */
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid transparent;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: default;
+        }
+
+        /* EFECTO DE ELEVACIÓN Y BRILLO VERDE */
+        .feature-card:hover {
+            transform: translateY(-15px);
+            border-color: #2ecc71;
+            box-shadow: 0 10px 30px rgba(46, 204, 113, 0.2);
+        }
+
+        /* MEJORA EN LOS ICONOS */
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background: #1a1a1a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: 0.3s;
+            border: 1px solid #333;
+        }
+
+        .feature-card:hover .icon-container {
+            background: #2ecc71;
+        }
+
+        .feature-card:hover .icon-container i {
+            color: #1a1a1a !important; /* El icono cambia a oscuro cuando el fondo es verde */
+        }
+
+        .feature-card h3 {
+            color: #2ecc71;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .feature-card p {
+            color: #b0b0b0;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
 
@@ -31,32 +92,40 @@
         </div>
     </section>
 
-    <section class="services-grid-section">
+    <section class="features">
         <div class="container">
             <div class="services-wrapper">
                 
                 <div class="feature-card">
-                    <i class="fas fa-laptop-code" style="color: #2ecc71; font-size: 40px; margin-bottom: 15px;"></i>
+                    <div class="icon-container">
+                        <i class="fas fa-laptop-code" style="color: #2ecc71; font-size: 35px;"></i>
+                    </div>
                     <h3>Desarrollo Web</h3>
-                    <p>Creamos sitios modernos, rápidos y optimizados para cualquier dispositivo.</p>
+                    <p>Sitios modernos, ultrarrápidos y optimizados para cualquier dispositivo móvil.</p>
                 </div>
 
                 <div class="feature-card">
-                    <i class="fas fa-mobile-alt" style="color: #2ecc71; font-size: 40px; margin-bottom: 15px;"></i>
+                    <div class="icon-container">
+                        <i class="fas fa-mobile-alt" style="color: #2ecc71; font-size: 35px;"></i>
+                    </div>
                     <h3>Apps Móviles</h3>
-                    <p>Diseño y desarrollo de aplicaciones intuitivas para iOS y Android.</p>
+                    <p>Aplicaciones intuitivas y potentes para Android e iOS con la mejor experiencia.</p>
                 </div>
 
                 <div class="feature-card">
-                    <i class="fas fa-search-dollar" style="color: #2ecc71; font-size: 40px; margin-bottom: 15px;"></i>
+                    <div class="icon-container">
+                        <i class="fas fa-chart-line" style="color: #2ecc71; font-size: 35px;"></i>
+                    </div>
                     <h3>Marketing Digital</h3>
-                    <p>Estrategias de SEO y SEM para posicionar tu marca en los primeros lugares.</p>
+                    <p>Impulsamos tu alcance con estrategias de SEO y campañas enfocadas en resultados.</p>
                 </div>
 
                 <div class="feature-card">
-                    <i class="fas fa-shield-alt" style="color: #2ecc71; font-size: 40px; margin-bottom: 15px;"></i>
+                    <div class="icon-container">
+                        <i class="fas fa-shield-alt" style="color: #2ecc71; font-size: 35px;"></i>
+                    </div>
                     <h3>Ciberseguridad</h3>
-                    <p>Protección total para tus datos y la infraestructura digital de tu negocio.</p>
+                    <p>Protección avanzada para tus datos corporativos y blindaje de infraestructuras.</p>
                 </div>
 
             </div>
@@ -65,8 +134,8 @@
 
     <section class="team-section">
         <div class="container">
-            <h2>¿Listo para <span>comenzar?</span></h2>
-            <p style="margin-bottom: 30px; color: #b0b0b0;">Contáctanos hoy mismo y recibe una asesoría personalizada.</p>
+            <h2>¿Tienes un proyecto <span>en mente?</span></h2>
+            <p style="margin-bottom: 30px; color: #b0b0b0;">Estamos listos para transformar tus ideas en herramientas reales de negocio.</p>
             <a href="contacto.html" class="btn-primary">Solicitar Información</a>
         </div>
     </section>
@@ -74,7 +143,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                &copy; 2026 EmpresaWeb - Todos los derechos reservados.
+                &copy; 2026 EmpresaWeb - Desarrollado por el Equipo de Innovación.
             </div>
         </div>
     </footer>
